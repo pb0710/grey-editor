@@ -1,0 +1,36 @@
+{
+	"version": "0.0.1",
+	"name": "grey-editor",
+	"main": "src/index.ts",
+	"scripts": {
+		"prepare": "husky install",
+		"dev": "vite",
+		"build": "rm -rf types && tsc && vite build",
+		"serve": "vite preview",
+		"test": "jest --detectOpenHandles"
+	},
+	"dependencies": {
+		"grey-utils": "link:../grey-utils"
+	},
+	"devDependencies": {
+		"@rollup/plugin-typescript": "^8.3.2",
+		"@types/jest": "^27.5.1",
+		"@typescript-eslint/eslint-plugin": "^5.26.0",
+		"@typescript-eslint/parser": "^5.26.0",
+		"eslint": "^8.16.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^8.0.1",
+		"jest": "^28.1.0",
+		"jest-environment-jsdom": "^28.1.2",
+		"lint-staged": "^12.4.2",
+		"pinst": "^3.0.0",
+		"prettier": "^2.6.2",
+		"ts-jest": "^28.0.3",
+		"typescript": "^4.7.2",
+		"vite": "^2.9.9"
+	},
+	"lint-staged": {
+		"*.{js,ts}": "eslint --cache --fix"
+	}
+}
